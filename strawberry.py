@@ -19,7 +19,7 @@ app_mode = st.sidebar.selectbox("Select Page",["Home","About","Disease Recogniti
 #Main Page
 if(app_mode=="Home"):
     st.header("STRAWBERRY DISEASE RECOGNITION SYSTEM")
-    image_path = "Strawberry Disease Data/flowers-fruits-garden-strawberry-plant-species.webp"
+    image_path = "Strawberry Disease Data/strawberries.jpg"
     st.image(image_path,use_column_width=True)
     st.markdown("""
     Welcome to the Strawberry Disease Recognition System! 🌿🔍
@@ -70,11 +70,11 @@ elif(app_mode=="Disease Recognition"):
         st.write("Our Prediction")
         result_index = model_prediction(test_image)
         #Reading Labels
-        class_name = ['angular_leafspot',
-                    'anthracnose_fruit_rot',
-                    'blossom_blight',
-                    'gray_mold',
-                    'leaf_spot',
-                    'powdery_mildew_fruit',
-                    'powdery_mildew_leaf']
+        class_name = ['angular leafspot',
+                    'anthracnose fruit rot',
+                    'blossom blight',
+                    'gray mold',
+                    'leaf spot',
+                    'powdery mildew fruit',
+                    'powdery mildew leaf']
         st.success("Model is Predicting it's a {}".format(class_name[result_index]))
